@@ -19,7 +19,6 @@ const renderCardTemplate = ({
   city,
   name,
   src = "http://place-puppy.com/200x200",
-  state,
   street,
   username,
   zipcode,
@@ -33,17 +32,18 @@ const renderCardTemplate = ({
         <li class="username">@${username}</li>
         <li class="name">${name}</li>
         <li class="address1">${street}</li>
-        <li class="address2">${city}, ${state} ${zipcode}</li>
+        <li class="address2">${city}, ${zipcode}</li>
     </ul>
 </div>
 </div>
 `;
 
 // 3. Create a template for each user in usersArray
+// GET user data from json placeholder
 
-fetch("js/users.json")
+fetch('https://jsonplaceholder.typicode.com/users')
   .then(resp => resp.json())
-  .then(data => {console.log(data[0])
+  .then(data => {
 
     data.forEach(({
       address: {
@@ -71,15 +71,6 @@ fetch("js/users.json")
 
     //4. Add list item to card-list in the DOM.
     document.getElementsByClassName('card-list')[0].appendChild(cardNodeElement);
-
-        // Create a new list item
-        const cardNodeElement = document.createElement("LI");
-        cardNodeElement.innerHTML = cardTemplate;
-
-        //4. Add list item to card-list in the DOM.
-        document
-          .getElementsByClassName("card-list")[0]
-          .appendChild(cardNodeElement);
       }
     );
   });
