@@ -13,11 +13,11 @@
 ## Instructions
 
 Build this illustration using HTML & CSS so it looks as close to the design as possible.
-You should, read the data from `users.json` and insert it to the DOM programmatically.
 
-- Use the data included in `index.js`.
-- Font must be [Roboto](https://fonts.google.com/specimen/Roboto?sidebar.open=true&selection.family=Roboto:wght@300) with its variations.
-- Use this for the image: http://place-puppy.com/200x200
+## The challenge 
+1. Start your project with the last commit of Task 73.
+2. Instead of users.json, you should make a GET Request to `https://jsonplaceholder.typicode.com/users`
+3. Adapt your code to match the actual API response. It is ok if some data cannot be replaced.- Use this for the image: http://place-puppy.com/200x200
 
 ![design for the challenge](card.png)
 
